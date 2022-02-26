@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipos de datos String</title>
+</head>
+
+<body>
+    <h1>Tipos de datos en JavaScript</h1>
+    <h2>String</h2>
+    <p>Este tipo de dato representa una cadena de caracteres, se puede declarar con comillas dobles "" o con comillas simples ''</p>
+    <p></p>
+    <script>
+        //*****Cadenas de texto o String
+        //Formas de declaracion o construccion
+        let nombre = "Andres";
+        let apellido = 'Osorio';
+        let saludo = new String("Hola a todos");
+        let lorem = "     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam exercitationem tenetur totam quas maiores molestias temporibus ut quisquam asperiores laboriosam, incidunt ab nulla itaque vitae in recusandae excepturi pariatur aspernatur.    "
+        console.log(nombre, apellido);
+        console.log(saludo);
+        console.log(lorem);
+        //Me indica la longitud del String
+        console.log("Propiedad length nombre: ", nombre.length);
+        console.log("Propiedad length apellido: ", apellido.length);
+        console.log("Propiedad length saludo: ", saludo.length);
+        console.log("Propiedad length lorem: ", lorem.length);
+        //Funciones
+        console.log("Funcion toUpperCase():");
+        console.log(nombre.toUpperCase(), apellido.toUpperCase());
+        console.log(saludo.toUpperCase());
+        console.log(lorem.toUpperCase());
+        console.log("Funcion toLowerCase():");
+        console.log(nombre.toLowerCase(), apellido.toLowerCase());
+        console.log(saludo.toLowerCase());
+        console.log(lorem.toLowerCase());
+        console.log("Funcion includes():");
+        console.log(lorem.includes("maiores"));
+        console.log(lorem.includes("carro"));
+        console.log("Funcion trim():");
+        console.log(lorem.trim());
+        console.log("Funcion split():");
+        console.log(lorem.split(" "));
+        console.log(lorem.split(","));
+        console.log(lorem.split("a"));
+        console.log(lorem.split("g"));
+        //Concatenacion
+        let saludar = "Hola mi nombre es " + nombre + " " + apellido + ".";
+        console.log(saludar);
+        //Interpolacion de variables
+        let saludar2 = `Hola mi nombre es ${nombre} ${apellido}.`;
+        console.log(saludar2);
+
+        let ul = `<ul><li>Item #1</li><li>Item #2</li><li>Item #3</li><li>Item #4</li><li>Item #5</li></ul>`;
+        console.log(ul)
+
+        let ul2 = `
+        <ul>
+            <li>Item #1</li>
+            <li>Item #2</li>
+            <li>Item #3</li>
+            <li>Item #4</li>
+            <li>Item #5</li>
+        </ul>
+            `;
+        console.log(ul2)
+
+        let ul3 = "<ul>";
+        ul3 += "\n\t<li>Item #1</li>";
+        ul3 += "\n\t<li>Item #2</li>";
+        ul3 += "\n\t<li>Item #3</li>";
+        ul3 += "\n\t<li>Item #4</li>";
+        ul3 += "\n\t<li>Item #5</li>";
+        ul3 += "\n</ul>";
+        console.log(ul3)
+    </script>
+</body>
+
+</html>

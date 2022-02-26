@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables Var Let</title>
+</head>
+
+<body>
+    <h1>Variables</h1>
+    <h3>Var:</h3>
+    <p>Utilizada para ambito global o de la funcion, se recomienda unsar en menor medida esta forma de declarar variables</p>
+    <h3>Let:</h3>
+    <p>Utilizada para ambito de bloque</p>
+    <h3>Objeto window</h3>
+    <p>El objeto window es el objeto que mapea toda la ventana del navegador</p>
+    <h3>Constantes</h3>
+    <p>Nos permite crear variables con valor Constantes</p>
+    <h3>Objetos</h3>
+    <p>Un objeto en una variable con diversos valores, se declara entre corchetes "{}" y este puede tener dentro otrtos objetos</p>
+    <h3>Arreglos</h3>
+    <p>Es un conjunto de valore, se declara entre llaves "[]"</p>
+    <script>
+        var hola = "Hola mundo"
+        console.log(hola)
+        let hello = "Hello World"
+        console.log(hello)
+        console.log(window)
+            //Si verificamos al momento de mostrar por consola el objeto window, nos podemos dar cuenta de que la variable hola se encuentra en este objeto, pero, la variable hello no se encuentra, esto debido al ambito de declaracion de esta variabel
+        console.log(window.hola);
+        console.log(window.hello); //al momento de tratar de mostrar por consola la variable hello conprobamos que el objeto esta variable no esta definida, mostrandonos por consola el mensaje "undefined"
+
+        //****Uso del var
+        //Antes del bloque
+        var comida = "Arróz";
+        console.log("Variable Comida antes del bloque: ", comida);
+        //Este Bloque
+        {
+            var comida = "Pescado"
+            console.log("Variable Comida dentro del bloque", comida)
+        }
+        //Despues del bloque
+        console.log("Variable Comida despues del bloque", comida);
+
+        //****Uso del let
+        //Antes del bloque
+        let comida2;
+        comida2 = "Arróz con pollo";
+        console.log("Variable Comida2 antes del bloque: ", comida2);
+        //Este Bloque
+        {
+            let comida2 = "Pescado asado"
+            console.log("Variable Comida2 dentro del bloque", comida2)
+        }
+        //Despues del bloque
+        console.log("Variable Comida2 despues del bloque", comida2);
+
+        //****Conatantes
+        // para declarar constantes se acostumbra nombrarlas con letras mayusculas, y es obligatorio darle sun valor, no darle valor  auna variable declarada como constante desencadena un error, estas variables no permiten cambiar el valor en el proceso de ejecucion
+        const PI = 3.1416;
+        //const UNO; // Error de declaracion
+        // PI = 3.15; // Error de reasignacion de valor
+        console.log(PI)
+
+        //*****Objetos
+        let objeto = {
+            nombre: "Andres",
+            edad: 26
+        }
+        console.log(objeto)
+        objeto.apellido = "Osoario"
+        console.log(objeto)
+            //Cuando declaramos como constante un objeto este si me permite modificar el valor de sus referencias, o propiedades estos debido que el objeto siguie siendo el mismo solo tienen una propiedad mas
+        const objeto2 = {
+            nombre: "Karen",
+            edad: 26
+        }
+        console.log(objeto2)
+        objeto2.apellido = "Osoario"
+        console.log(objeto2)
+
+        //*****Arreglo
+        let arreglo = ["0", "1", "2", "3", "4", "5"]
+        console.log(arreglo)
+        arreglo.push("6")
+        console.log(arreglo)
+            //Lo mismo pasa con los arreglos
+        const arreglo2 = ["a", "b", "c", "d", "e", "f"]
+        console.log(arreglo2)
+        arreglo2.push("g")
+        console.log(arreglo2)
+    </script>
+</body>
+
+</html>

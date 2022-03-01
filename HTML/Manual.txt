@@ -1,0 +1,15 @@
+git pull https://github.com/AndresOsorio0710/R_2022_JS_CSS_HTML.git
+
+Etiqurtas basicas de html
+
+<!DOCTYPE html> :
+
+<html lang="en"></html> : 
+
+<head></head> :
+
+<meta charset="UTF-8"> :
+
+<title>Document</title> :
+
+<body></body> : 
